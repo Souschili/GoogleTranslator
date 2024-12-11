@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+
+option csharp_namespace = "Shared";
+
+package translator;    
+
+message TranslateRequest {
+    repeated string texts = 1; // —троки дл€ перевода(список)
+    string from = 2;           // язык оригинала
+    string to = 3;             // язык перевода
+}
+
+message TranslateResponse {
+    repeated string translations = 1; // ѕереведенные строки
+}
+
+message ServiceInfoResponse {
+    string external_service = 1;
+    string cache_type = 2;
+    int64 cache_size = 3;
+}
+
+service TranslationService {
+    rpc Translate (TranslateRequest) returns (TranslateResponse); 
+    rpc GetServiceInfo (google.protobuf.Empty) returns (ServiceInfoResponse);
+}
+
+

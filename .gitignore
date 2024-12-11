@@ -1,0 +1,76 @@
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+bin/
+obj/
+
+# Visual Studio Code
+.vscode/
+
+# Rider
+.idea/
+*.sln.iml
+
+# NuGet Packages
+*.nupkg
+*.snupkg
+packages/
+*.nuspec
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Visual Studio Test Results
+TestResults/
+*.trx
+
+# Build directories
+build/
+dist/
+
+# GitHub Actions
+.github/
+*.yml
+*.yaml
+
+# User-specific files
+*.db
+*.sublime-workspace
+*.sublime-project
+
+# Windows specific files
+Thumbs.db
+ehthumbs.db
+Icon?
+Desktop.ini
+
+# MacOS specific files
+.DS_Store
+
+# Large media files
+*.mp4
+*.avi
+*.mov
+*.wmv
+*.flv
+*.tiff
+
+# Others
+*.exe
+*.dll
+*.pdb
+*.obj
+*.class
+*.jar
+*.war
