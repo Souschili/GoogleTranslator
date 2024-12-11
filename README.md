@@ -31,3 +31,22 @@
 ```bash
 git clone <ссылка на репозиторий>
 cd <папка с проектом>
+```
+2. Установите зависимости
+Убедитесь, что у вас установлены все необходимые зависимости:
+
+bash
+Copy code
+dotnet restore
+3. Запуск сервиса
+Запустите сервис, используя команду:
+
+bash
+Copy code
+dotnet run --project TranslationService
+4. Запуск клиента
+Для использования консольного клиента, выполните:
+
+bash
+Copy code
+dotnet run --project ClientConsoleApp
