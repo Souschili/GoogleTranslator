@@ -50,8 +50,8 @@ dotnet run --project TranslationService
 ```bash
 dotnet run --project ClientConsoleApp
 ```
-№№ Интерфейсы
-№№№ gRPC
+## Интерфейсы
+### gRPC
 Сервис реализует gRPC интерфейс для перевода текста. Вот пример клиента:
 
 ```bash
