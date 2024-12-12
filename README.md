@@ -50,3 +50,27 @@ dotnet run --project TranslationService
 ```bash
 dotnet run --project ClientConsoleApp
 ```
+№№ Интерфейсы
+№№№ gRPC
+Сервис реализует gRPC интерфейс для перевода текста. Вот пример клиента:
+
+```bash
+using Grpc.Net.Client;
+using Shared;
+
+var channel = GrpcChannel.ForAddress("http://localhost:5000");
+var client = new TranslationService.TranslationServiceClient(channel);
+
+var request = new TranslateRequest
+{
+    From = "ru",
+    To = "en",
+    Texts = { "Привет мир!" }
+};
+
+var response = client.Translate(request);
+foreach (var translation in response.Translations)
+{
+    Console.WriteLine(translation);
+}
+```
